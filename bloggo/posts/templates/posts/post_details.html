@@ -1,0 +1,13 @@
+{% extends 'posts/base.html' %}
+{% block content %}
+    <h2>Post</h2>
+    {% if post %}
+        <div class="post">
+            <h3>{{ post.title }}</h3>
+            <em>{{ post.pub_date }}</em>
+            <p>{{ post.body }}</p>
+        </div>
+    {% else %}
+        <p>No posts yet!</p>
+    {% endif %}
+{% endblock %}
